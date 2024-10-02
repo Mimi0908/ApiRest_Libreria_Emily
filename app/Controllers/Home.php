@@ -5,6 +5,8 @@ use App\Models\LibreriaModel;
 
 class Home extends BaseController
 {
+
+    //llamado de los libros y redirección a la libreria
     public function index()
     {
         $model= new LibreriaModel();
@@ -18,10 +20,11 @@ class Home extends BaseController
 
         return view('controlLibreria', $data);
     }
+    //redirección a la vista crear
     public function crearIndex(){
         return view('crear');
     }
-
+    //guardado de datos recibidos se envian al modelo con su función insertar y redirige al usuario a la pagina principal y manda un mensaje positivo o negativo
     public function crear(){
         $datos = [
             "titulo" =>$_POST['titulo'], 
@@ -40,8 +43,7 @@ class Home extends BaseController
         }
 
     }
-    
-
+    //guardado de datos recibidos se envian al modelo con su función actualizar y redirige al usuario a la pagina principal y manda un mensaje positivo o negativo
     public function actualizar(){
         $datos = [
             "titulo" =>$_POST['titulo'], 
@@ -63,7 +65,7 @@ class Home extends BaseController
         }
 
     }
-
+    //recoge el ID verifica la existencia del libro, sus datos y envia al usuario a la vista de actualizar si sale exitosa o a la pagina principal y un mensaje de error si hay un fallo
     public function obtenerNombre($idNombre){
         $data = ["id_nombre" => $idNombre];
         $Crud = new LibreriaModel();
@@ -83,7 +85,7 @@ class Home extends BaseController
             return redirect()->to(base_url().'/')->with('mensaje', '6');
         }
     }
-
+    //verifica el Id y la existencia del libro y lo elimina de la base de datos mediante el modelo de su función eliminar
     public function eliminar($id_nombre){
         $Crud = new LibreriaModel();
         $data = ["id_nombre" => $id_nombre];
