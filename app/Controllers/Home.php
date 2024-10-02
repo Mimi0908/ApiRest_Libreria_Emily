@@ -80,7 +80,7 @@ class Home extends BaseController
     
             return view('actualizar', $datos);
         } else {
-            return redirect()->to(base_url().'/')->with('mensaje', 'Libro no encontrado');
+            return redirect()->to(base_url().'/')->with('mensaje', '6');
         }
     }
 

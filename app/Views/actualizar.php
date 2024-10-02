@@ -11,18 +11,19 @@
 <body>
     <div class="p-5">
         <h1 class="fw-bold">Editar: <?php echo $titulo?></h1>
-        <form method="POST" action="<?php echo base_url() . '/actualizar' ?>">
+        <form method="POST" action="<?php echo base_url() . '/actualizar' ?>" class="px-5">
             <input type="text" id="id_nombre" hidden="" name="id_nombre" value="<?php echo $id_nombre ?>">
             <label for="titulo" class="form-label">Título</label>
-            <input type="text" class="form-control" name="titulo" id="titulo" value="<?php echo $titulo ?>" required>
+            <input type="text" class="form-control border border-primary" name="titulo" id="titulo" value="<?php echo $titulo ?>" required>
             <label for="autor" class="form-label">Autor</label>
-            <input type="text" class="form-control" id="autor" name="autor" value="<?php echo $autor ?>" required>
+            <input type="text" class="form-control border border-primary" id="autor" name="autor" value="<?php echo $autor ?>" required>
             <label for="publicacion" class="form-label">Año publicación</label>
-            <input type="text" class="form-control" id="publicacion" name="publicacion" value="<?php echo $publicacion ?>" required>
+            <input type="text" class="form-control border border-primary" id="publicacion" name="publicacion" value="<?php echo $publicacion ?>" required>
             <label for="genero" class="form-label">Género</label>
-            <input type="text" class="form-control" id="genero" name="genero" value="<?php echo $genero ?>" required>
+            <input type="text" class="form-control border border-primary" id="genero" name="genero" value="<?php echo $genero ?>" required>
             <br>
-            <button type="submit" class="btn btn-primary mt-3">Editar</button>
+            <a href="<?php echo base_url().'/'?>" class="btn btn-secondary mt-3 mr-3 col-2">Volver</a>
+            <button type="submit" class="btn btn-primary mt-3 col-2">Editar</button>
         </form>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

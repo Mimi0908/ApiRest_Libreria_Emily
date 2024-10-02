@@ -11,17 +11,18 @@
 <body>
     <div class="p-5">
         <h1 class="fw-bold">Crear Nuevo Libro</h1>
-        <form method="POST" action="<?php echo base_url() . '/crearLibro' ?>">
+        <form method="POST" action="<?php echo base_url() . '/crearLibro' ?>" class="px-5">
             <label for="titulo" class="form-label">Título</label>
-            <input type="text" class="form-control" id="titulo" name="titulo" required>
+            <input type="text" class="form-control border border-primary" id="titulo" name="titulo" required>
             <label for="autor" class="form-label">Autor</label>
-            <input type="text" class="form-control" id="autor" name="autor" required>
+            <input type="text" class="form-control border border-primary" id="autor" name="autor" required>
             <label for="publicacion" class="form-label">Año publicación</label>
-            <input type="text" class="form-control" id="publicacion" name="publicacion" required>
+            <input type="text" class="form-control border border-primary" id="publicacion" name="publicacion" required>
             <label for="genero" class="form-label">Género</label>
-            <input type="text" class="form-control" id="genero" name="genero" required>
+            <input type="text" class="form-control border border-primary" id="genero" name="genero" required>
             <br>
-            <button type="submit" class="btn btn-primary mt-3">Crear</button>
+            <a href="<?php echo base_url().'/'?>" class="btn btn-secondary mt-3 mr-5 col-2">Volver</a>
+            <button type="submit" class="btn btn-primary mt-3 col-2">Crear</button>
         </form>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

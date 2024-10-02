@@ -11,11 +11,8 @@
 <body>
     <main class="p-5">
         <h1 class="fw-bold">Inventario Libros</h1>
-        <div>
-            <a href="<?php echo base_url().'/crear'?>" class="btn btn-success m-3">Crear Libro</a>
-        </div>
-        <div>
-            <table class="table table-bordered border-dark">
+        <div class=" d-flex justify-content-center px-4">
+            <table class="table border-dark table-hover table-bordered border-secondary mt-5 ">
                 <thead>
                     <tr>
                         <th scope="col">Título</th>
@@ -26,7 +23,7 @@
                         <th scope="col">Eliminar</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody class="table-group-divider">
                     <?php foreach($datos as $key): ?>
                         <tr>
                             <td><?php echo $key->titulo?></td>
@@ -43,6 +40,9 @@
                     <?php endforeach; ?>
                 </tbody>
             </table>
+        </div>
+        <div>
+            <a href="<?php echo base_url().'/crear'?>" class="btn btn-success m-3 col-2">Crear Libro</a>
         </div>
     </main>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -69,6 +69,9 @@
       }
       else if(mensaje == '5'){
         swal('Error!','Fallo al eliminar!','error');
+      }
+      else if(mensaje == '6'){
+        swal('Error!','Libro no encontrado!','error');
       }
     </script>
 </body>
